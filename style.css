@@ -1,0 +1,124 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #3a003d, #12001a 80%);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* CONTAINER */
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 30px 25px;
+  max-width: 420px;
+  width: 100%;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 25px rgba(255, 0, 153, 0.25);
+  animation: popUp 1.3s ease;
+}
+
+/* TEXT STYLES */
+.title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff66cc, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.subs {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 10px;
+}
+
+.spiritual p {
+  color: #ffcc00;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.owner {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.highlight {
+  color: #ff99ff;
+  font-weight: 600;
+}
+
+/* TIMER */
+.timer-box {
+  margin: 20px 0;
+}
+
+.wait-text {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+#countdown {
+  font-size: 3rem;
+  color: #ffccff;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.seconds {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+/* BUTTON */
+.join-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(135deg, #ff0099, #ffcc00);
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 20px rgba(255, 0, 150, 0.4);
+  animation: fadePulse 1.5s infinite alternate;
+  transition: transform 0.3s ease;
+}
+
+.join-btn:hover {
+  transform: scale(1.08);
+}
+
+/* ANIMATIONS */
+@keyframes fadePulse {
+  from { opacity: 0.5; box-shadow: 0 0 10px rgba(255, 0, 150, 0.3); }
+  to { opacity: 1; box-shadow: 0 0 25px rgba(255, 204, 0, 0.6); }
+}
+
+@keyframes popUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .title { font-size: 1.6rem; }
+  #countdown { font-size: 2.5rem; }
+}
